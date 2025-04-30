@@ -1,6 +1,6 @@
 const db = require("../db/db")
 
-const getTodos = (req, res) => {
+const getTodos = (_req, res) => {
   try {
     const todos = db.prepare("SELECT * FROM todos").all()
     res.status(200).json(todos)
